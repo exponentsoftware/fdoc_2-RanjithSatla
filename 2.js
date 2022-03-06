@@ -51,8 +51,8 @@ const users = [
 ];
 
 const scoresGreaterThan85 = () => {
-  for (let i = 0; i < users.length - 1; i++) {
-    if (users[i].scores > 75) console.log(users[i]);
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].scores > 85) console.log(users[i]);
   }
 };
 
