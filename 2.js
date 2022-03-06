@@ -5,7 +5,7 @@ Write a function which editUser if the user exist in the users array.
 ```js
 */
 
-const users = [
+var users = [
   {
     name: "Brook",
     scores: 75,
@@ -50,10 +50,43 @@ const users = [
   },
 ];
 
-const scoresGreaterThan85 = () => {
+// const scoresGreaterThan85 = () => {
+//   for (let i = 0; i < users.length; i++) {
+//     if (users[i].scores > 85) {
+//       //  console.log(users[i]);
+//     }
+//   }
+// };
+
+// scoresGreaterThan85(users);
+
+// 	Write a function which addUser  to the user array only if the user does not exist.
+
+const addUser = (users, user) => {
+  let exists = false;
+  //   users.forEach((element) => {
+  //     console.log(element.name,);
+  //   });
+
   for (let i = 0; i < users.length; i++) {
-    if (users[i].scores > 85) console.log(users[i]);
+    // console.log(user.name);
+    if (users[i].name == user.name) {
+      exists = true;
+      console.log("User exists");
+    }
+  }
+  if (!exists) {
+    console.log("False");
+    users.push(user);
+    console.log(users);
   }
 };
 
-scoresGreaterThan85(users);
+const user = {
+  name: "Ram",
+  scores: 90,
+  skills: ["HTM", "CSS", "JS"],
+  age: 20,
+};
+
+addUser(users, user);
